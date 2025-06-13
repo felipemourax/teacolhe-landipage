@@ -3,27 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  ArrowRight,
-  Calendar,
-  DollarSign,
-  Clock,
-  Award,
-  Briefcase,
-  Sparkles,
-  Heart,
-  Shield,
-  Users,
-  CheckCircle,
-  Brain,
-  Stethoscope,
-  HandHeart,
-  Music,
-  Palette,
-  Activity,
-  FileText,
-  Target,
-} from "lucide-react"
+import { ArrowRight, Calendar, DollarSign, Clock, Award, Briefcase, Sparkles } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -44,66 +24,6 @@ export const metadata: Metadata = {
 }
 
 export default function BeneficiosProfissionais() {
-  const terapias = [
-    // ABA e Comportamentais
-    { nome: "ABA (Análise do Comportamento Aplicada)", icone: Target },
-    { nome: "Terapia Cognitivo-Comportamental (TCC)", icone: Brain },
-    { nome: "Floortime (DIR/Floortime)", icone: Users },
-    { nome: "Modelo Denver (ESDM)", icone: Heart },
-
-    // Fonoaudiologia e Comunicação
-    { nome: "Fonoaudiologia", icone: Stethoscope },
-    { nome: "PECS (Picture Exchange Communication System)", icone: FileText },
-    { nome: "Comunicação Suplementar e Alternativa (CSA)", icone: Users },
-    { nome: "PROMPT", icone: Stethoscope },
-
-    // Terapia Ocupacional
-    { nome: "Terapia Ocupacional", icone: HandHeart },
-    { nome: "Integração Sensorial", icone: Activity },
-    { nome: "Habilidades da vida diária", icone: CheckCircle },
-    { nome: "Treino motor fino e grosso", icone: HandHeart },
-
-    // Fisioterapia e Movimento
-    { nome: "Fisioterapia", icone: Activity },
-    { nome: "Psicomotricidade", icone: Activity },
-    { nome: "Educação Física Adaptada", icone: Activity },
-    { nome: "Artes Marciais Terapêuticas", icone: Shield },
-
-    // Terapias Expressivas
-    { nome: "Musicoterapia", icone: Music },
-    { nome: "Arteterapia", icone: Palette },
-    { nome: "Dança-terapia", icone: Heart },
-    { nome: "Teatro terapêutico", icone: Users },
-
-    // Psicologia
-    { nome: "Psicologia Infantil", icone: Brain },
-    { nome: "Psicoterapia individual", icone: Brain },
-    { nome: "Psicoterapia familiar", icone: Users },
-    { nome: "Aconselhamento parental", icone: Heart },
-    { nome: "Grupos de apoio a pais", icone: Users },
-
-    // Educação e Pedagogia
-    { nome: "Psicopedagogia", icone: FileText },
-    { nome: "Pedagogia Terapêutica", icone: FileText },
-    { nome: "Mediação Escolar", icone: Users },
-    { nome: "Intervenção Precoce Educacional", icone: Target },
-    { nome: "Tutoria comportamental", icone: CheckCircle },
-
-    // Medicina e Saúde
-    { nome: "Psiquiatria Infantil", icone: Stethoscope },
-    { nome: "Neuropediatria", icone: Brain },
-    { nome: "Nutrição", icone: Heart },
-    { nome: "Nutrição Comportamental", icone: Heart },
-    { nome: "Medicina Integrativa", icone: Stethoscope },
-
-    // Terapias Alternativas
-    { nome: "Equoterapia", icone: Heart },
-    { nome: "Cinoterapia (terapia com cães)", icone: Heart },
-    { nome: "Terapia Aquática", icone: Activity },
-    { nome: "Reiki", icone: Sparkles },
-    { nome: "Aromaterapia", icone: Sparkles },
-  ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 font-['Inter']">
       {/* Header */}
@@ -114,15 +34,12 @@ export default function BeneficiosProfissionais() {
               <Image src="/images/logo-verde.png" alt="TEAcolhe Saúde" width={180} height={40} className="h-8 w-auto" />
             </Link>
           </div>
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-8">
             <Link href="/#planos" className="text-gray-700 hover:text-green-600 transition-colors">
               Planos
             </Link>
             <Link href="/#terapias" className="text-gray-700 hover:text-green-600 transition-colors">
               Terapias
-            </Link>
-            <Link href="/#clinicas" className="text-gray-700 hover:text-green-600 transition-colors">
-              Clínicas
             </Link>
             <Link href="/parcerias-clinicas" className="text-gray-700 hover:text-green-600 transition-colors">
               Para Clínicas
@@ -250,17 +167,32 @@ export default function BeneficiosProfissionais() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {terapias.map((terapia, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { nome: "Fonoaudiologia", icone: "/placeholder.svg?height=60&width=60" },
+              { nome: "Psicologia", icone: "/placeholder.svg?height=60&width=60" },
+              { nome: "Terapia Ocupacional", icone: "/placeholder.svg?height=60&width=60" },
+              { nome: "ABA", icone: "/placeholder.svg?height=60&width=60" },
+              { nome: "Psicopedagogia", icone: "/placeholder.svg?height=60&width=60" },
+              { nome: "Musicoterapia", icone: "/placeholder.svg?height=60&width=60" },
+              { nome: "Fisioterapia", icone: "/placeholder.svg?height=60&width=60" },
+              { nome: "Arteterapia", icone: "/placeholder.svg?height=60&width=60" },
+            ].map((especialidade, index) => (
               <Card
                 key={index}
                 className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group"
               >
                 <CardContent className="p-0">
-                  <div className="bg-gradient-to-br from-blue-100 to-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <terapia.icone className="w-8 h-8 text-blue-600" />
+                  <div className="flex justify-center mb-4">
+                    <Image
+                      src={especialidade.icone || "/placeholder.svg"}
+                      alt={especialidade.nome}
+                      width={60}
+                      height={60}
+                      className="group-hover:scale-110 transition-transform"
+                    />
                   </div>
-                  <h3 className="font-semibold text-xs text-center leading-tight">{terapia.nome}</h3>
+                  <h3 className="font-semibold">{especialidade.nome}</h3>
                 </CardContent>
               </Card>
             ))}

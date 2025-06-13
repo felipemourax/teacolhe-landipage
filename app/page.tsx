@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -134,21 +133,21 @@ export default function TeacolheLanding() {
             <Image src="/images/logo-verde.png" alt="TEAcolhe Saúde" width={180} height={40} className="h-8 w-auto" />
           </div>
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#planos" className="text-gray-700 hover:text-green-600 transition-colors">
+            <a href="#planos" className="text-gray-700 hover:text-green-600 transition-colors">
               Planos
-            </Link>
-            <Link href="#terapias" className="text-gray-700 hover:text-green-600 transition-colors">
+            </a>
+            <a href="#terapias" className="text-gray-700 hover:text-green-600 transition-colors">
               Terapias
-            </Link>
-            <Link href="#clinicas" className="text-gray-700 hover:text-green-600 transition-colors">
+            </a>
+            <a href="#clinicas" className="text-gray-700 hover:text-green-600 transition-colors">
               Clínicas
-            </Link>
-            <Link href="/parcerias-clinicas" className="text-gray-700 hover:text-green-600 transition-colors">
+            </a>
+            <a href="/parcerias-clinicas" className="text-gray-700 hover:text-green-600 transition-colors">
               Para Clínicas
-            </Link>
-            <Link href="/beneficios-profissionais" className="text-gray-700 hover:text-green-600 transition-colors">
+            </a>
+            <a href="/beneficios-profissionais" className="text-gray-700 hover:text-green-600 transition-colors">
               Para Profissionais
-            </Link>
+            </a>
             <Button className="bg-green-600 hover:bg-green-700">Fazer Cadastro</Button>
           </nav>
         </div>

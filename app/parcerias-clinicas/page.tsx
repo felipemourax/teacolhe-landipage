@@ -33,15 +33,12 @@ export default function ParceriasClinicas() {
               <Image src="/images/logo-verde.png" alt="TEAcolhe Saúde" width={180} height={40} className="h-8 w-auto" />
             </Link>
           </div>
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-8">
             <Link href="/#planos" className="text-gray-700 hover:text-green-600 transition-colors">
               Planos
             </Link>
             <Link href="/#terapias" className="text-gray-700 hover:text-green-600 transition-colors">
               Terapias
-            </Link>
-            <Link href="/#clinicas" className="text-gray-700 hover:text-green-600 transition-colors">
-              Clínicas
             </Link>
             <Link href="/parcerias-clinicas" className="text-green-600 font-medium">
               Para Clínicas
