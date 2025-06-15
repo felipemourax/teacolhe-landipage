@@ -6,9 +6,19 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Users, Calendar, Shield, Zap, Clock, FileText, ChevronRight } from "lucide-react"
+import { ArrowRight, Users, Calendar, Shield, Zap, Clock, FileText, ChevronRight, Menu, X } from "lucide-react"
 
 export default function ParceriasClinicasClient() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   function ClinicFAQAccordion() {
     const [openIndex, setOpenIndex] = useState<number | null>(null)
 
@@ -86,14 +96,16 @@ export default function ParceriasClinicasClient() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 font-['Inter']">
-      {/* Header */}
-      <header className="bg-white border-b border-green-100">
+      {/* Header - Remove fixed positioning and adjust z-index */}
+      <header className="relative bg-white border-b border-green-100 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Link href="/">
               <Image src="/images/logo-verde.png" alt="TEAcolhe Saúde" width={180} height={40} className="h-8 w-auto" />
             </Link>
           </div>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/#planos" className="text-gray-700 hover:text-green-600 transition-colors">
               Planos
@@ -109,10 +121,62 @@ export default function ParceriasClinicasClient() {
             </Link>
             <Button className="bg-green-600 hover:bg-green-700">Fazer Cadastro</Button>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation Menu - Fix positioning */}
+        <div
+          className={`md:hidden bg-white/95 backdrop-blur-md border-b border-green-100 shadow-lg transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "opacity-100 max-h-96 visible" : "opacity-0 max-h-0 invisible overflow-hidden"
+          }`}
+        >
+          <nav className="container mx-auto px-4 py-6 space-y-4">
+            <Link
+              href="/#planos"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Planos
+            </Link>
+            <Link
+              href="/#terapias"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Terapias
+            </Link>
+            <Link
+              href="/parcerias-clinicas"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-green-600 font-medium bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Para Clínicas
+            </Link>
+            <Link
+              href="/beneficios-profissionais"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Para Profissionais
+            </Link>
+            <div className="pt-4 border-t border-gray-200">
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={closeMobileMenu}>
+                Fazer Cadastro
+              </Button>
+            </div>
+          </nav>
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Remove overlay and adjust Hero Section - Remove top padding */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">

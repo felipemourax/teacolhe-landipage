@@ -22,6 +22,8 @@ import {
   Activity,
   Palette,
   ChevronRight,
+  Menu,
+  X,
 } from "lucide-react"
 import { useState } from "react"
 
@@ -101,16 +103,28 @@ function ProfessionalFAQAccordion() {
 }
 
 export default function BeneficiosProfissionaisClient() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 font-['Inter']">
-      {/* Header */}
-      <header className="bg-white border-b border-green-100">
+      {/* Header - Remove fixed positioning and adjust z-index */}
+      <header className="relative bg-white border-b border-green-100 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Link href="/">
               <Image src="/images/logo-verde.png" alt="TEAcolhe Saúde" width={180} height={40} className="h-8 w-auto" />
             </Link>
           </div>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/#planos" className="text-gray-700 hover:text-green-600 transition-colors">
               Planos
@@ -126,10 +140,62 @@ export default function BeneficiosProfissionaisClient() {
             </Link>
             <Button className="bg-green-600 hover:bg-green-700">Fazer Cadastro</Button>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation Menu - Fix positioning */}
+        <div
+          className={`md:hidden bg-white/95 backdrop-blur-md border-b border-green-100 shadow-lg transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "opacity-100 max-h-96 visible" : "opacity-0 max-h-0 invisible overflow-hidden"
+          }`}
+        >
+          <nav className="container mx-auto px-4 py-6 space-y-4">
+            <Link
+              href="/#planos"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Planos
+            </Link>
+            <Link
+              href="/#terapias"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Terapias
+            </Link>
+            <Link
+              href="/parcerias-clinicas"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Para Clínicas
+            </Link>
+            <Link
+              href="/beneficios-profissionais"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-green-600 font-medium bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Para Profissionais
+            </Link>
+            <div className="pt-4 border-t border-gray-200">
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={closeMobileMenu}>
+                Fazer Cadastro
+              </Button>
+            </div>
+          </nav>
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Remove overlay and adjust Hero Section - Remove top padding */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-green-600 text-white">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -309,10 +375,7 @@ export default function BeneficiosProfissionaisClient() {
                 descricao: "Comece a receber agendamentos e atender pacientes da plataforma",
               },
             ].map((passo, index) => (
-              <Card
-                key={index}
-                className="relative p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
-              >
+              <Card key={index} className="relative p-6 text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
@@ -489,114 +552,6 @@ export default function BeneficiosProfissionaisClient() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-green-600 text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para impulsionar sua carreira?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Junte-se a mais de 1.200 profissionais em todo o Brasil e faça parte da maior rede de atendimento
-            especializado para crianças com TEA.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg">
-              Cadastrar meu perfil
-            </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-blue-600/30 text-lg">
-              Falar com um consultor
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-12 px-4 bg-gray-900 text-white">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <Link href="/">
-                <Image
-                  src="/images/logo-branco.png"
-                  alt="TEAcolhe Saúde"
-                  width={180}
-                  height={40}
-                  className="h-8 w-auto mb-4"
-                />
-              </Link>
-              <p className="text-gray-400 text-sm">
-                Revolucionando o acesso a terapias para crianças com TEA e outras PCDs.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Planos</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/#planos" className="hover:text-white transition-colors">
-                    Plano Essencial
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#planos" className="hover:text-white transition-colors">
-                    Plano Sem Limite
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#planos" className="hover:text-white transition-colors">
-                    Comparar Planos
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Parcerias</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/parcerias-clinicas" className="hover:text-white transition-colors">
-                    Para Clínicas
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/beneficios-profissionais" className="hover:text-white transition-colors">
-                    Para Profissionais
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Cadastro
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Termos de Uso
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Política de Privacidade
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Cookies
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 TEAcolhe Saúde. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

@@ -27,6 +27,8 @@ import {
   Target,
   Zap,
   ArrowRight,
+  Menu,
+  X,
 } from "lucide-react"
 
 // Custom hook for intersection observer
@@ -169,6 +171,7 @@ function FAQAccordion() {
 
 export default function TeacolheLanding() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
@@ -179,6 +182,14 @@ export default function TeacolheLanding() {
     if (plansSection) {
       plansSection.scrollIntoView({ behavior: "smooth" })
     }
+  }
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
   }
 
   const terapias = [
@@ -277,6 +288,8 @@ export default function TeacolheLanding() {
           <div className="flex items-center space-x-2">
             <Image src="/images/logo-verde.png" alt="TEAcolhe Saúde" width={180} height={40} className="h-8 w-auto" />
           </div>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <a href="#planos" className="text-gray-700 hover:text-green-600 transition-colors">
               Planos
@@ -295,8 +308,70 @@ export default function TeacolheLanding() {
             </a>
             <Button className="bg-green-600 hover:bg-green-700">Fazer Cadastro</Button>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        <div
+          className={`md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-green-100 shadow-lg transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible"
+          }`}
+        >
+          <nav className="container mx-auto px-4 py-6 space-y-4">
+            <a
+              href="#planos"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Planos
+            </a>
+            <a
+              href="#terapias"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Terapias
+            </a>
+            <a
+              href="#clinicas"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Clínicas
+            </a>
+            <a
+              href="/parcerias-clinicas"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Para Clínicas
+            </a>
+            <a
+              href="/beneficios-profissionais"
+              onClick={closeMobileMenu}
+              className="block py-3 px-4 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200"
+            >
+              Para Profissionais
+            </a>
+            <div className="pt-4 border-t border-gray-200">
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={closeMobileMenu}>
+                Fazer Cadastro
+              </Button>
+            </div>
+          </nav>
         </div>
       </header>
+
+      {/* Overlay for mobile menu */}
+      {isMobileMenuOpen && <div className="fixed inset-0 bg-black/20 z-40 md:hidden" onClick={closeMobileMenu} />}
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 relative overflow-hidden">
