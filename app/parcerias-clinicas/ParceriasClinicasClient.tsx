@@ -31,7 +31,7 @@ export default function ParceriasClinicasClient() {
       {
         pergunta: "Como funciona o pagamento?",
         resposta:
-          "Você pode escolher: D+3 com taxa de 5%, ou D+30 sem taxa. Pagamentos são automáticos e por sessão realizada. Sem glosas, sem inadimplência.",
+          "Você pode escolher: D+5 com taxa de 5%, ou D+30 sem taxa. Pagamentos são automáticos e por sessão realizada. Sem glosas, sem inadimplência.",
       },
       {
         pergunta: "Preciso atender exclusivamente pacientes da TEAcolhe?",
@@ -51,7 +51,7 @@ export default function ParceriasClinicasClient() {
       {
         pergunta: "Existe algum custo para minha clínica participar?",
         resposta:
-          "Não há taxa de adesão ou mensalidade. A remuneração da TEAcolhe ocorre apenas pela taxa do D+3 ou valor fixo dos planos vendidos aos pacientes.",
+          "Não há taxa de adesão ou mensalidade. A remuneração da TEAcolhe ocorre apenas pela taxa do D+5 ou valor fixo dos planos vendidos aos pacientes.",
       },
     ]
 
@@ -234,7 +234,7 @@ export default function ParceriasClinicasClient() {
                 icon: Shield,
                 title: "Pagamento Garantido",
                 description:
-                  "Receba por cada atendimento realizado, sem glosas e sem inadimplência. Pagamentos em D+1 ou D+30.",
+                  "Receba por cada atendimento realizado, sem glosas e sem inadimplência. Pagamentos em D+5 ou D+30.",
               },
               {
                 icon: Users,
@@ -440,7 +440,7 @@ export default function ParceriasClinicasClient() {
                         className="mx-auto group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <h3 className="font-semibold text-xl mb-2 text-gray-900">JiuJiTEA</h3>
+                    <h3 className="font-semibold text-xl mb-2 text-gray-900">Jiu Jitea</h3>
                     <p className="text-gray-600">
                       Jiu-Jitsu especializado para crianças com TEA, promovendo disciplina, autoconfiança e
                       desenvolvimento motor
@@ -528,7 +528,7 @@ export default function ParceriasClinicasClient() {
                 />
               </Link>
               <p className="text-gray-400 text-sm">
-                Revolucionando o acesso a terapias para crianças com TEA e outras PCDs.
+                Revolucionando o acesso a terapias para individuos com TEA.
               </p>
             </div>
 

@@ -389,7 +389,7 @@ export default function TeacolheLanding() {
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Planos de Terapia para
               <br />
-              <span className="text-green-600">Crianças com TEA</span>
+              <span className="text-green-600">Indivíduos com TEA</span>
               <br />
               em Clínicas Credenciadas
             </h1>
@@ -422,11 +422,11 @@ export default function TeacolheLanding() {
       <AnimatedSection>
         <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">A Revolução no Acesso a Terapias para PCDs</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Transformando o Acesso às Terapias para Pessoas com Autismo</h2>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
               Não somos planos de saúde. Somos inovação. Com a TEAcolhe Saúde, desburocratizamos o acesso às terapias
-              essenciais para crianças com TEA e outras PCDs.
-              <span className="font-semibold"> Sem carência. Sem glosas. Sem complicações.</span>
+              essenciais para indivíduos com TEA.
+              <span className="font-semibold"> Sem carência. Sem recusas. Sem glosas. Sem complicações.</span>
             </p>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="flex items-center justify-center space-x-2">
@@ -453,7 +453,7 @@ export default function TeacolheLanding() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O Que Fazemos</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Somos a ponte entre famílias e clínicas especializadas — com segurança, clareza e zero burocracia.
+                Somos a ponte entre famílias e clínicas especializadas com segurança, clareza e zero burocracia.
               </p>
             </div>
 
@@ -659,7 +659,7 @@ export default function TeacolheLanding() {
                         <Clock className="w-6 h-6 text-blue-600 mt-1" />
                         <div>
                           <h3 className="font-semibold text-lg mb-2">Pagamento Rápido</h3>
-                          <p className="text-gray-600">Receba em D+1 ou D+30, conforme sua preferência.</p>
+                          <p className="text-gray-600">Receba em D+5 ou D+30, conforme sua preferência.</p>
                         </div>
                       </div>
                     </CardContent>
@@ -792,7 +792,7 @@ export default function TeacolheLanding() {
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Terapias Oferecidas</h2>
-              <p className="text-xl text-gray-600">Principais especialidades para crianças com TEA e outras PCDs</p>
+              <p className="text-xl text-gray-600">Principais especialidades para crianças e adolescentes com TEA</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
@@ -831,7 +831,7 @@ export default function TeacolheLanding() {
                       <div>
                         <h3 className="font-semibold text-lg">Pais e Responsáveis</h3>
                         <p className="text-gray-600">
-                          Por crianças com diagnóstico ou suspeita de TEA ou outras deficiências
+                          Por crianças com diagnóstico ou suspeita de TEA.
                         </p>
                       </div>
                     </div>
@@ -1340,7 +1340,7 @@ export default function TeacolheLanding() {
                 className="h-8 w-auto mb-4"
               />
               <p className="text-gray-400 text-sm">
-                Revolucionando o acesso a terapias para crianças com TEA e outras PCDs.
+                Revolucionando o acesso a terapias para  indivíduos com TEA.
               </p>
             </div>
 

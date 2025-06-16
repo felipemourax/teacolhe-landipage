@@ -45,7 +45,7 @@ function ProfessionalFAQAccordion() {
     {
       pergunta: "Como funciona o recebimento?",
       resposta:
-        "Você escolhe entre: D+3 (pagamento no dia seguinte após a finalização do procedimento) com taxa de 5%, ou D+30 (sem taxa). Os pagamentos são automáticos, transparentes e sem glosas.",
+        "Você escolhe entre: D+5 (pagamento no dia seguinte após a finalização do procedimento) com taxa de 5%, ou D+30 (sem taxa). Os pagamentos são automáticos, transparentes e sem glosas.",
     },
     {
       pergunta: "Preciso atender exclusivamente pela plataforma?",
@@ -55,7 +55,7 @@ function ProfessionalFAQAccordion() {
     {
       pergunta: "Como são definidos os valores das sessões?",
       resposta:
-        "A TEAcolhe Saúde disponibiliza tabelas de referência por especialidade, baseadas em valores praticados no mercado, garantindo equilíbrio entre valorização profissional e competitividade. Como profissional autônomo, você recebe os valores de acordo com os planos disponíveis e sua especialidade sugeridas pela TEAcolhe Saúde. Caso receba um convite de uma clínica parceira para prestar atendimentos vinculados a ela, essa relação será direta entre você e a clínica, que poderá propor suas próprias condições de remuneração. No entanto, todos os atendimentos agendados por meio da plataforma da TEAcolhe, mesmo com vínculo a uma clínica, seguem as mesmas políticas de pagamento aplicadas aos profissionais autônomos — com garantia, sem glosas e com opção de D+3 ou D+30.",
+        "A TEAcolhe Saúde disponibiliza tabelas de referência por especialidade, baseadas em valores praticados no mercado, garantindo equilíbrio entre valorização profissional e competitividade. Como profissional autônomo, você recebe os valores de acordo com os planos disponíveis e sua especialidade com os valores sugeridos pela TEAcolhe Saúde. Caso receba um convite de uma clínica parceira para prestar atendimentos vinculados a ela, essa relação será direta entre você e a clínica, que poderá propor suas próprias condições de remuneração. No entanto, todos os atendimentos agendados por meio da plataforma da TEAcolhe, mesmo com vínculo a uma clínica, seguem as mesmas políticas de pagamento aplicadas aos profissionais autônomos, ou seja, com garantia de recebimento, sem glosas e com opção de D+5 ou D+30.",
     },
     {
       pergunta: "Há algum custo para participar?",
@@ -256,7 +256,7 @@ export default function BeneficiosProfissionaisClient() {
                 icon: DollarSign,
                 title: "Pagamento Garantido",
                 description:
-                  "Receba por cada sessão realizada, sem glosas e sem inadimplência. Escolha entre pagamento em D+1 ou D+30.",
+                  "Receba por cada sessão realizada, sem glosas e sem inadimplência. Escolha entre pagamento em D+5 ou D+30.",
               },
               {
                 icon: Calendar,
@@ -367,7 +367,7 @@ export default function BeneficiosProfissionaisClient() {
               {
                 numero: "3",
                 titulo: "Configuração",
-                descricao: "Configure sua agenda, valores e especialidades de atendimento",
+                descricao: "Configure sua agenda e especialidades de atendimento",
               },
               {
                 numero: "4",
@@ -499,7 +499,7 @@ export default function BeneficiosProfissionaisClient() {
                         className="mx-auto group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <h3 className="font-semibold text-xl mb-2 text-gray-900">JiuJiTEA</h3>
+                    <h3 className="font-semibold text-xl mb-2 text-gray-900">Jiu Jitea</h3>
                     <p className="text-gray-600">
                       Jiu-Jitsu especializado para crianças com TEA, promovendo disciplina, autoconfiança e
                       desenvolvimento motor
