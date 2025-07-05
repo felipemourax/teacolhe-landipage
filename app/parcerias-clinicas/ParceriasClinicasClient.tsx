@@ -190,10 +190,6 @@ export default function ParceriasClinicasClient() {
                 <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
                   Credenciar minha clínica
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-green-600/30">
-                  Saiba mais
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
               </div>
             </div>
             <div className="relative hidden md:block">
@@ -252,7 +248,7 @@ export default function ParceriasClinicasClient() {
                 icon: Zap,
                 title: "Marketing Digital",
                 description:
-                  "Sua clínica será divulgada em nosso site e aplicativo, aumentando sua visibilidade no mercado.",
+                  "Sua clínica será divulgada em nosso site e redes sociais, aumentando sua visibilidade no mercado.",
               },
               {
                 icon: Clock,
@@ -505,9 +501,6 @@ export default function ParceriasClinicasClient() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg">
               Credenciar minha clínica
-            </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-green-600/30 text-lg">
-              Falar com um consultor
             </Button>
           </div>
         </div>

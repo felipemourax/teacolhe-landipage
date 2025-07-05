@@ -208,11 +208,7 @@ export default function BeneficiosProfissionaisClient() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                  Cadastrar meu perfil
-                </Button>
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-blue-600/30">
-                  Conhecer benefícios
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Quero me cadastrar
                 </Button>
               </div>
             </div>
@@ -552,6 +548,110 @@ export default function BeneficiosProfissionaisClient() {
           </div>
         </div>
       </section>
+
+       {/* CTA */}
+      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para se tornar um profissional parceiro?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+            Faça parte da maior rede de terapeutas dedicados ao desenvolvimento de crianças com TEA
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg">
+              Quero me credenciar
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-4 bg-gray-900 text-white">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <Link href="/">
+                <Image
+                  src="/images/logo-branco.png"
+                  alt="TEAcolhe Saúde"
+                  width={180}
+                  height={40}
+                  className="h-8 w-auto mb-4"
+                />
+              </Link>
+              <p className="text-gray-400 text-sm">
+                Revolucionando o acesso a terapias para individuos com TEA.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold mb-4">Planos</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/#planos" className="hover:text-white transition-colors">
+                    Plano Essencial
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#planos" className="hover:text-white transition-colors">
+                    Plano Sem Limite
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#planos" className="hover:text-white transition-colors">
+                    Comparar Planos
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold mb-4">Parcerias</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/parcerias-clinicas" className="hover:text-white transition-colors">
+                    Para Clínicas
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/beneficios-profissionais" className="hover:text-white transition-colors">
+                    Para Profissionais
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    Credenciamento
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold mb-4">Legal</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    Termos de Uso
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    Política de Privacidade
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    Cookies
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+            <p>&copy; 2024 TEAcolhe Saúde. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

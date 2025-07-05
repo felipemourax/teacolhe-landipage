@@ -306,7 +306,7 @@ export default function TeacolheLanding() {
             <a href="/beneficios-profissionais" className="text-gray-700 hover:text-green-600 transition-colors">
               Para Profissionais
             </a>
-            <Button className="bg-green-600 hover:bg-green-700">Fazer Cadastro</Button>
+            <Button className="bg-green-600 hover:bg-green-700">Acessar painel</Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -696,33 +696,34 @@ export default function TeacolheLanding() {
               <p className="text-xl text-gray-600">Escolha o plano ideal para seu filho</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Plano Essencial */}
               <AnimatedSection delay={200}>
                 <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-green-200">
                   <CardContent className="p-0">
                     <div className="text-center mb-6">
                       <Badge className="bg-green-100 text-green-800 mb-4">Plano Essencial</Badge>
-                      <h3 className="text-2xl font-bold mb-2">Ideal para Iniciantes</h3>
+                      <h3 className="text-2xl font-bold mb-2">TEAcolhe Essencial</h3>
                       <p className="text-gray-600 mb-4">
                         Perfeito para quem está começando o acompanhamento terapêutico
                       </p>
-                      <div className="text-4xl font-bold text-green-600 mb-2">R$ 250</div>
-                      <p className="text-gray-500">por mês</p>
+                      <div className="text-4xl font-bold text-green-600 mb-2">Consulte o preço</div>
+                      <p className="text-gray-500">Valor é definido conforme a região.</p>
                     </div>
 
+                      <div className="space-y-3 mb-6">
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-600" />
+                        <span>4 sessões de Jiu Jitea</span>
+                      </div>
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-600" />
-                        <span>1 sessão de Fonoaudiologia</span>
+                        <span>1 sessão de Fonoaudiologia ou Terapia Ocupacional</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-600" />
-                        <span>1 sessão de Psicologia</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-600" />
-                        <span>Limite: 2 sessões por mês</span>
+                        <span>Limite: 5 sessões por mês</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-600" />
@@ -744,13 +745,17 @@ export default function TeacolheLanding() {
                   <CardContent className="p-0">
                     <div className="text-center mb-6">
                       <Badge className="bg-blue-100 text-blue-800 mb-4">Plano Sem Limite</Badge>
-                      <h3 className="text-2xl font-bold mb-2">Acompanhamento Completo</h3>
+                      <h3 className="text-2xl font-bold mb-2">TEAcolhe Evoluir Completo</h3>
                       <p className="text-gray-600 mb-4">Para um acompanhamento contínuo e mais completo</p>
-                      <div className="text-4xl font-bold text-blue-600 mb-2">R$ 480</div>
-                      <p className="text-gray-500">por mês</p>
+                      <div className="text-4xl font-bold text-blue-600 mb-2">Consulte o preço</div>
+                      <p className="text-gray-500">Valor definido conforme a região</p>
                     </div>
 
                     <div className="space-y-3 mb-6">
+                     <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-blue-600" />
+                        <span>Jiu Jitea e Outros Esportes</span>
+                      </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-blue-600" />
                         <span>Fonoaudiologia</span>
@@ -773,11 +778,62 @@ export default function TeacolheLanding() {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-blue-600" />
-                        <span className="font-semibold">Limite: 5 sessões por mês</span>
+                        <span className="font-semibold">Limite: 10 sessões por mês</span>
                       </div>
                     </div>
 
                     <Button className="w-full bg-blue-600 hover:bg-blue-700">Quero esse plano</Button>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+
+              {/* Plano Teacolhe Top Nacional */}
+              <AnimatedSection delay={600}>
+                <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-yellow-200 relative">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-yellow-600 text-white px-4 py-1">Top Nacional</Badge>
+                  </div>
+                  <CardContent className="p-0">
+                    <div className="text-center mb-6">
+                      <Badge className="bg-yellow-100 text-yellow-800 mb-4">Plano Top Nacional</Badge>
+                      <h3 className="text-2xl font-bold mb-2">TEAcolhe Top Nacional</h3>
+                      <p className="text-gray-600 mb-4">Para um acompanhamento contínuo e mais completo com cobertura em todas as terapias</p>
+                      <div className="text-4xl font-bold text-yellow-600 mb-2">Consulte o preço</div>
+                      <p className="text-gray-500">Valor definido conforme a região</p>
+                    </div>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <span>Jiu Jitea e Outros Esportes</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <span>Fonoaudiologia</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <span>Psicologia</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <span>Terapia Ocupacional</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <span>Musicoterapia</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <span>Fisioterapia e muito mais...</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <span className="font-semibold">Limite: 20 sessões por mês</span>
+                      </div>
+                    </div>
+
+                    <Button className="w-full bg-yellow-600 hover:bg-yellow-700">Quero esse plano</Button>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -860,6 +916,14 @@ export default function TeacolheLanding() {
                           Contratar terapias com agilidade, sem depender de planos tradicionais
                         </p>
                       </div>
+                    </div>
+                  </AnimatedSection>
+                  <AnimatedSection delay={800}>
+                    <div className="mt-8">
+                      <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4">
+                        <Heart className="w-5 h-5 mr-2" />
+                        Fazer Cadastro Gratuito
+                      </Button>
                     </div>
                   </AnimatedSection>
                 </div>
@@ -1136,13 +1200,6 @@ export default function TeacolheLanding() {
                 </div>
               </div>
             </div>
-
-            <div className="text-center mt-8">
-              <Button variant="outline" className="border-green-200 hover:bg-green-50">
-                Ver Todas as Clínicas
-                <ChevronRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
           </div>
         </section>
       </AnimatedSection>
@@ -1290,7 +1347,7 @@ export default function TeacolheLanding() {
 
             <div className="text-center mt-12">
               <p className="text-gray-600 mb-4">Ainda tem dúvidas?</p>
-              <Button variant="outline" className="border-green-200 hover:bg-green-50">
+              <Button variant="outline" className="border-green-200 hover:bg-green-50 bg-transparent">
                 Falar com nosso suporte
                 <ChevronRight className="w-4 h-4 ml-2" />
               </Button>
@@ -1414,5 +1471,5 @@ export default function TeacolheLanding() {
         </div>
       </footer>
     </div>
-  )
+  )\
 }
