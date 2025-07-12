@@ -196,60 +196,49 @@ export default function TeacolheLanding() {
     // ABA e Comportamentais
     { nome: "ABA (Análise do Comportamento Aplicada)", icone: Target },
     { nome: "Terapia Cognitivo-Comportamental (TCC)", icone: Brain },
+    { nome: "Planejamento Educacional Individualizado (PEI)", icone: Brain },
     { nome: "Floortime (DIR/Floortime)", icone: Users },
     { nome: "Modelo Denver (ESDM)", icone: Heart },
 
     // Fonoaudiologia e Comunicação
     { nome: "Fonoaudiologia", icone: Stethoscope },
-    { nome: "PECS (Picture Exchange Communication System)", icone: FileText },
     { nome: "Comunicação Suplementar e Alternativa (CSA)", icone: Users },
     { nome: "PROMPT", icone: Stethoscope },
 
     // Terapia Ocupacional
     { nome: "Terapia Ocupacional", icone: HandHeart },
     { nome: "Integração Sensorial", icone: Activity },
-    { nome: "Habilidades da vida diária", icone: CheckCircle },
-    { nome: "Treino motor fino e grosso", icone: HandHeart },
 
     // Fisioterapia e Movimento
     { nome: "Fisioterapia", icone: Activity },
     { nome: "Psicomotricidade", icone: Activity },
-    { nome: "Educação Física Adaptada", icone: Activity },
+    { nome: "Terapia do Sono", icone: Activity },
     { nome: "Artes Marciais Terapêuticas", icone: Shield },
 
     // Terapias Expressivas
     { nome: "Musicoterapia", icone: Music },
     { nome: "Arteterapia", icone: Palette },
-    { nome: "Dança-terapia", icone: Heart },
-    { nome: "Teatro terapêutico", icone: Users },
 
     // Psicologia
     { nome: "Psicologia Infantil", icone: Brain },
     { nome: "Psicoterapia individual", icone: Brain },
     { nome: "Psicoterapia familiar", icone: Users },
-    { nome: "Aconselhamento parental", icone: Heart },
     { nome: "Grupos de apoio a pais", icone: Users },
 
     // Educação e Pedagogia
     { nome: "Psicopedagogia", icone: FileText },
-    { nome: "Pedagogia Terapêutica", icone: FileText },
-    { nome: "Mediação Escolar", icone: Users },
+    { nome: "Mediação Escolar (AT)", icone: Users },
     { nome: "Intervenção Precoce Educacional", icone: Target },
-    { nome: "Tutoria comportamental", icone: CheckCircle },
 
     // Medicina e Saúde
     { nome: "Psiquiatria Infantil", icone: Stethoscope },
     { nome: "Neuropediatria", icone: Brain },
+    { nome: "Integração Sensorial de Ayres", icone: Brain },
     { nome: "Nutrição", icone: Heart },
-    { nome: "Nutrição Comportamental", icone: Heart },
-    { nome: "Medicina Integrativa", icone: Stethoscope },
 
     // Terapias Alternativas
     { nome: "Equoterapia", icone: Heart },
-    { nome: "Cinoterapia (terapia com cães)", icone: Heart },
-    { nome: "Terapia Aquática", icone: Activity },
-    { nome: "Reiki", icone: Sparkles },
-    { nome: "Aromaterapia", icone: Sparkles },
+
   ]
 
   const clinicas = [
@@ -306,7 +295,9 @@ export default function TeacolheLanding() {
             <a href="/beneficios-profissionais" className="text-gray-700 hover:text-green-600 transition-colors">
               Para Profissionais
             </a>
-            <Button className="bg-green-600 hover:bg-green-700">Acessar painel</Button>
+            <a href="https://painel.teacolhesaude.com.br" target="_blank" rel="noopener noreferrer">
+            < Button className="bg-green-600 hover:bg-green-700">Acessar Painel</Button>
+           </a>
           </nav>
 
           {/* Mobile Menu Button */}

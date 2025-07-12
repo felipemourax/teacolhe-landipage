@@ -119,7 +119,9 @@ export default function ParceriasClinicasClient() {
             <Link href="/beneficios-profissionais" className="text-gray-700 hover:text-green-600 transition-colors">
               Para Profissionais
             </Link>
-            <Button className="bg-green-600 hover:bg-green-700">Fazer Cadastro</Button>
+            <a href="https://painel.teacolhesaude.com.br" target="_blank" rel="noopener noreferrer">
+            < Button className="bg-green-600 hover:bg-green-700">Acessar Painel</Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}

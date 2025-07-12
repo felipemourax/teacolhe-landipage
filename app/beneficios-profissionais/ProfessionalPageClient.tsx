@@ -138,7 +138,9 @@ export default function BeneficiosProfissionaisClient() {
             <Link href="/beneficios-profissionais" className="text-green-600 font-medium">
               Para Profissionais
             </Link>
-            <Button className="bg-green-600 hover:bg-green-700">Fazer Cadastro</Button>
+          <a href="https://painel.teacolhesaude.com.br" target="_blank" rel="noopener noreferrer">
+          < Button className="bg-green-600 hover:bg-green-700">Acessar Painel</Button>
+          </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -207,9 +209,13 @@ export default function BeneficiosProfissionaisClient() {
                 profissional contínuo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                  Quero me cadastrar
-                </Button>
+               <Button
+               size="lg"
+               className="bg-white text-blue-600 hover:bg-gray-100"
+               onClick={() => window.open("https://vagas.teacolhesaude.com.br/public/index.php", "_blank")}
+               >
+              Quero me cadastrar
+              </Button>
               </div>
             </div>
             <div className="relative hidden md:block">
@@ -557,9 +563,14 @@ export default function BeneficiosProfissionaisClient() {
             Faça parte da maior rede de terapeutas dedicados ao desenvolvimento de crianças com TEA
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg">
-              Quero me credenciar
-            </Button>
+           <Button
+           size="lg"
+          className="bg-white text-green-600 hover:bg-gray-100 text-lg"
+          onClick={() => window.open("https://vagas.teacolhesaude.com.br/public/index.php", "_blank")}
+          >
+        Quero me credenciar
+        </Button>
+
           </div>
         </div>
       </section>
