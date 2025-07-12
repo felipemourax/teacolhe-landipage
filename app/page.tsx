@@ -238,7 +238,6 @@ export default function TeacolheLanding() {
 
     // Terapias Alternativas
     { nome: "Equoterapia", icone: Heart },
-
   ]
 
   const clinicas = [
@@ -296,8 +295,8 @@ export default function TeacolheLanding() {
               Para Profissionais
             </a>
             <a href="https://painel.teacolhesaude.com.br" target="_blank" rel="noopener noreferrer">
-            < Button className="bg-green-600 hover:bg-green-700">Acessar Painel</Button>
-           </a>
+              <Button className="bg-green-600 hover:bg-green-700">Acessar Painel</Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -413,7 +412,9 @@ export default function TeacolheLanding() {
       <AnimatedSection>
         <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Transformando o Acesso às Terapias para Pessoas com Autismo</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Transformando o Acesso às Terapias para Pessoas com Autismo
+            </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
               Não somos planos de saúde. Somos inovação. Com a TEAcolhe Saúde, desburocratizamos o acesso às terapias
               essenciais para indivíduos com TEA.
@@ -702,12 +703,11 @@ export default function TeacolheLanding() {
                       <p className="text-gray-500">Valor é definido conforme a região.</p>
                     </div>
 
-                      <div className="space-y-3 mb-6">
+                    <div className="space-y-3 mb-6">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-600" />
                         <span>4 sessões de Jiu Jitea</span>
                       </div>
-                    <div className="space-y-3 mb-6">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-600" />
                         <span>1 sessão de Fonoaudiologia ou Terapia Ocupacional</span>
@@ -743,7 +743,7 @@ export default function TeacolheLanding() {
                     </div>
 
                     <div className="space-y-3 mb-6">
-                     <div className="flex items-center space-x-3">
+                      <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-blue-600" />
                         <span>Jiu Jitea e Outros Esportes</span>
                       </div>
@@ -788,7 +788,9 @@ export default function TeacolheLanding() {
                     <div className="text-center mb-6">
                       <Badge className="bg-yellow-100 text-yellow-800 mb-4">Plano Top Nacional</Badge>
                       <h3 className="text-2xl font-bold mb-2">TEAcolhe Top Nacional</h3>
-                      <p className="text-gray-600 mb-4">Para um acompanhamento contínuo e mais completo com cobertura em todas as terapias</p>
+                      <p className="text-gray-600 mb-4">
+                        Para um acompanhamento contínuo e mais completo com cobertura em todas as terapias
+                      </p>
                       <div className="text-4xl font-bold text-yellow-600 mb-2">Consulte o preço</div>
                       <p className="text-gray-500">Valor definido conforme a região</p>
                     </div>
@@ -872,14 +874,12 @@ export default function TeacolheLanding() {
                 <div className="space-y-4">
                   <AnimatedSection delay={200}>
                     <div className="flex items-start space-x-4">
-                      <div className="bg-green-100 p-2 rounded-lg">
+                      <div classNameclassName="bg-green-100 p-2 rounded-lg">
                         <Users className="w-6 h-6 text-green-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg">Pais e Responsáveis</h3>
-                        <p className="text-gray-600">
-                          Por crianças com diagnóstico ou suspeita de TEA.
-                        </p>
+                        <p className="text-gray-600">Por crianças com diagnóstico ou suspeita de TEA.</p>
                       </div>
                     </div>
                   </AnimatedSection>
@@ -1387,9 +1387,7 @@ export default function TeacolheLanding() {
                 height={40}
                 className="h-8 w-auto mb-4"
               />
-              <p className="text-gray-400 text-sm">
-                Revolucionando o acesso a terapias para  indivíduos com TEA.
-              </p>
+              <p className="text-gray-400 text-sm">Revolucionando o acesso a terapias para indivíduos com TEA.</p>
             </div>
 
             <div>
@@ -1462,5 +1460,5 @@ export default function TeacolheLanding() {
         </div>
       </footer>
     </div>
-  )\
+  )
 }
